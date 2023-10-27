@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/shoeList_item"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/list_item_layout"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/shoe_name"
+            style="@style/ListItem"
+            android:hint="@string/shoe" />
+
+        <TextView
+            android:id="@+id/shoe_size"
+            style="@style/ListItem"
+            android:hint="@string/number" />
+
+        <TextView
+            android:id="@+id/shoe_company"
+            style="@style/ListItem"
+            android:hint="@string/company"/>
+
+        <TextView
+            android:id="@+id/shoe_description"
+            style="@style/ListItem"
+            android:hint="@string/description" />
+    </LinearLayout>
+
+</layout>
