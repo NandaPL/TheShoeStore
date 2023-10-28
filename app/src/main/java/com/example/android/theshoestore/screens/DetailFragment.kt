@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -31,7 +30,7 @@ class DetailFragment : Fragment() {
         )
 
         dataBinding.lifecycleOwner = viewLifecycleOwner
-        mViewModel = ViewModelProvider(this)[StoreListViewModel::class.java]
+        mViewModel = ViewModelProvider(requireActivity())[StoreListViewModel::class.java]
 
         dataBinding.apply {
             saveButton.setOnClickListener {
@@ -55,14 +54,8 @@ class DetailFragment : Fragment() {
             shoeDescription
         )
 
-        if(newShoe != null){
-            mViewModel.addShoeToList(newShoe)
-            Toast.makeText(requireContext(), "adicionado", Toast.LENGTH_LONG).show()
-            backToListFragment()
-        } else {
-            Toast.makeText(requireContext(), "Nulo", Toast.LENGTH_LONG).show()
-        }
-
+        mViewModel.addShoeToList(newShoe)
+        backToListFragment()
     }
 
     private fun backToListFragment() {

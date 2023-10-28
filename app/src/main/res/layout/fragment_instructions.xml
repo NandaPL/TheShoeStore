@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- The choice of using a LinearLayout is because it is simple and straightforward,
+    organizing view elements vertically or horizontally. In addition to being easy to use,
+    as it aligns elements effortlessly, and easy to read and maintain.-->
     <LinearLayout
         android:id="@+id/instructions_layout"
         android:layout_width="match_parent"

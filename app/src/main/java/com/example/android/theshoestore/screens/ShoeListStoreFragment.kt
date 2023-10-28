@@ -11,9 +11,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.NavigationUI
 import com.example.android.theshoestore.R
 import com.example.android.theshoestore.databinding.FragmentStoreBinding
 import com.example.android.theshoestore.databinding.ShoeItemBinding
@@ -37,7 +35,7 @@ class ShoeListStoreFragment : Fragment() {
         setHasOptionsMenu(true)
 
         dataBinding.lifecycleOwner = viewLifecycleOwner
-        mViewModel = ViewModelProvider(this)[StoreListViewModel::class.java]
+        mViewModel = ViewModelProvider(requireActivity())[StoreListViewModel::class.java]
 
         mViewModel.shoeList.observe(viewLifecycleOwner, Observer {shoes ->
             dataBinding.shoesList.removeAllViews()

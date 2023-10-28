@@ -2,8 +2,6 @@ package com.example.android.theshoestore
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.commit
-import androidx.navigation.fragment.NavHostFragment
 import com.example.android.theshoestore.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -13,6 +11,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         dataBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(dataBinding.root)
-
     }
 }

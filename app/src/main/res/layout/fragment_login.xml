@@ -2,12 +2,16 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ConstraintLayout makes the constructed layout more responsive and flexible,
+     which easily adapts to the most different screens, by allowing easy adjustment
+     and positioning of views, simplifying the layout.-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/login_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".screens.LoginFragment">
-
 
         <TextView
             android:id="@+id/app_name_text"
